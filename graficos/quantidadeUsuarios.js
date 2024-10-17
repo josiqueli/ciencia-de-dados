@@ -1,6 +1,5 @@
-
-
 async function quantidadeUsuarios() {
+  const url = 'https://raw.githubusercontent.com/josiqueli/ciencia-de-dados/refs/heads/main/base-de-dados/educacao-dados-globais.json'
   const res = await fetch(url)
   const dados = await res.json()
   const nomeDasRedes = Object.keys(dados)
