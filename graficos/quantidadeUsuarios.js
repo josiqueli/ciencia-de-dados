@@ -9,7 +9,10 @@ const data = [
   {
     x: nomeDasRedes,
     y: quantidadeUsuarios,
-    type: 'bar'
+    type: 'bar',
+    marker: {
+      color: 
+    }
   }
 ]
 
