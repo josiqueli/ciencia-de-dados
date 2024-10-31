@@ -11,7 +11,7 @@ const data = [
     y: quantidadeUsuarios,
     type: 'bar',
     marker: {
-      color: 'red'
+      color: 'grey'
     }
   }
 ]
