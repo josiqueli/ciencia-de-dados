@@ -7,7 +7,7 @@ async function vizualizarInformacoesGlobais() {
     const pessoasEducacao = (dados.total_pessoas_com_acesso_a_educacao / 1e9)
     const horas = parseInt(dados.tempo_medio_dia_estudando)
     const pessoasEnsinoS = (dados.total_pessoas_com_educacao_superior / 1e9)
-    //const minutos = Math.round((dados.tempo_medio - horas) * 100)
+    const minutos = Math.round((dados.tempo_medio_dia_estudando - horas) * 100)
     const porcentagemEstudando = ((pessoasEducacao/ pessoasNoMundo ) * 100).toFixed(2)
 
     const paragrafo = document.createElement('p')
