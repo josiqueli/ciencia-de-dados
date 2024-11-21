@@ -3,10 +3,10 @@ const url = 'https://raw.githubusercontent.com/josiqueli/ciencia-de-dados/refs/h
 async function vizualizarInformacoesGlobais() {
     const res = await fetch(url)
     const dados = await res.json()
-    const pessoasNoMundo = (dados.total_pessoas_mundo / 1e9)
-    const pessoasEducacao =  Math.round((dados.total_pessoas_com_acesso_a_educacao / 1e9)).toFixed (2)
+    const pessoasNoMundo = (dados.total_pessoas_mundo / 1.0e9)
+    const pessoasEducacao =  Math.round((dados.total_pessoas_com_acesso_a_educacao / 1.0e9)).toFixed (2)
     const horas = parseInt(dados.tempo_medio_dia_estudando)
-    const pessoasEnsinoS = (dados.total_pessoas_com_educacao_superior / 1e9)
+    const pessoasEnsinoS = (dados.total_pessoas_com_educacao_superior / 1.0e9)
     const minutos = Math.round((dados.tempo_medio_dia_estudando - horas) * 100)
     const porcentagemEstudando = ((pessoasEducacao/ pessoasNoMundo ) * 100).toFixed(2)
 
