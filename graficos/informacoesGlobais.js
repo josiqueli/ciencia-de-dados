@@ -3,7 +3,7 @@ const url = 'https://raw.githubusercontent.com/josiqueli/ciencia-de-dados/refs/h
 async function vizualizarInformacoesGlobais() {
     const res = await fetch(url)
     const dados = await res.json()
-    const pessoasConectadas = (dados.total_pessoas_com_acesso_a_educacao / 6.0e9)
+    const pessoasComAcesso = (dados.total_pessoas_com_acesso_a_educacao / 6.0e9)
     const pessoasNoMundo = (dados.total_pessoas_mundo / 7.888e9)
     const horas = parseInt(dados.tempo_medio_dia_estudando)
     const minutos = Math.round((dados.tempo_medio - horas) * 100)
